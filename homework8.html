@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework8</title>
+</head>
+<style>
+    body{
+        height:1500px;
+    }
+    .bg{
+        background:black;
+        width:100%;
+        height:50px;
+        display:flex;
+    }
+    a{
+        color:white;
+        text-align:center;
+        text-decoration:none;
+    }
+    a:hover{
+        color:orange;
+    }
+    .one{
+        margin-left:20px;
+    }
+    .a{
+        margin-left:30px;
+        margin-top:12px;
+        font-size:20px;
+    }
+    .b{
+        margin-top:19px;
+        font-size:2px;
+    }
+    .c{
+        margin-top:16px;
+        font-size:15px;
+        margin-left:30px;
+    }
+    .d{
+        position:absolute;
+        float:right;
+        margin-left:1024px;
+        margin-top:16px;
+        font-size:10px;
+        color:white;
+        opacity:0.5;
+        z-index:2;
+    }
+    .star{
+        margin-top:16px;
+        width:40px;
+        height:20px;
+        background-image:url('images/img2.png');
+        background-position:-210px -22px;
+    }
+    .search{
+        position:relative;
+        transition-property:all;
+        margin-top:13px;
+        margin-left:20px;
+    }
+    .bn{
+        width:350px;
+        height:350px;
+        border-radius:50%;  
+        float:right;
+        margin-right:180px;  
+        margin-top:-590px; 
+        animation:animation 5s linear infinite;
+    }
+    @keyframes animation{
+        0%{
+            transform:rotate(0deg);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+    .start{
+        width:40px;
+        height:40px;
+        background-image:url('images/img6.jpg');
+        background-position:2098px 0.01px;
+        float:right;
+        margin-right:500px;
+        margin-top:-200px;
+        transform:scale(1.5);
+        position:relative;
+    }
+    .zanting{
+        width:50px;
+        height:50px;
+        background-image:url('./images/img6.jpg');
+        background-position:-199px -128px;
+        float:right;
+        margin-right:500px;
+        margin-top:-210px;
+        transform:scale(1.5);
+        position:relative;
+    }
+    .word{
+        width:400px;
+        height:50px;
+        margin-top:100px;
+        text-align:center;
+        margin-left:200px;
+    }
+    .title{
+        font-size:40px;
+    }
+    .title1{
+        font-size:15px;
+        color:rgba(41, 40, 40, 0.5);
+    }
+    .title2{
+        font-size:15px;
+        color:rgba(41, 40, 40, 0.5);
+        margin-left:10px;
+    }
+    .title3{
+        font-size:15px;
+        color:black;
+        margin-left:10px;
+    }
+    .title4{
+        font-size:15px;
+        color:rgba(41, 40, 40, 0.5);
+        margin-left:10px;
+    }
+    .e{
+        margin-left:10px;
+    }
+    .all{
+        margin-top:30px;
+        width:500px;
+        display:flex;
+        margin-left:50px;
+    }
+    .title5{
+        font-size:15px;
+        margin-top:15px;
+    }
+    span{
+        color:rgb(228, 180, 21);
+    }
+    .line{
+        width:500px;
+        height:1px;
+        background:#ddd;  
+        margin-top:140px;
+        margin-left:180px;
+        display:inline-block;
+    }
+    .song{
+        width:300px;
+        height:300px;
+        overflow-y:inherit; 
+        margin-left:250px;
+        margin-top:60px;
+    }
+    .song>p{
+        text-align:center;
+        font-size:16px;
+    }
+    .playerMid {
+	    float:right;
+	    width:309px;
+	    height:10px;
+	    overflow:hidden;
+	    position:relative;
+        margin-top:-190px;
+        margin-right:180px;
+        border:1px gainsboro;
+        background-color:gainsboro;
+    }
+    #wp_processBtn{
+        position:absolute;
+        z-index:200;
+        width:9px;
+        height:9px;
+    }
+    .playerMid .prograssBar {
+	    width:300px;
+	    height:10px;
+    }
+    .playerRight{
+        float:right;
+        margin-top:-210px;
+        margin-right:130px;
+    }
+    .voice{
+        width:30px;
+        height:20px;
+        background-image:url('./images/img6.jpg');
+        background-position:790px 88px;
+        float:right;
+        margin-top:-36px;
+        margin-right:-40px;
+    }
+    .down{
+        position:relative;
+        width:200px;
+        height:49px;
+        background-image:url('./images/img6.jpg');
+        background-position:830px -40px;
+        float:right;
+        margin-right:250px;
+        margin-top:-160px
+    }
+    .zi{
+        position:absolute;
+        float:right;
+        margin-left:1030px;
+        margin-top:-144px;
+        font-size:16px;
+        z-index:2;
+        text-align:center;
+    }
+    .load{
+        width:21px;
+        height:19px;
+        background-image:url('./images/img6.jpg');
+        background-position:-275px 89px;
+        margin-left:990px;
+        margin-top:-140px;
+        position:absolute;
+        z-index:200;
+    }
+    .pic{
+        width:60px;
+        height:60px;
+        float:right;
+        margin-right:500px;
+        margin-top:-70px;
+    }
+    .talk{
+        position:relative;
+        float:right;
+        margin-top:-60px;
+        margin-right:250px;
+    }
+    .dong{
+        position:absolute;
+        float:right;
+        width:10px;
+        height:10px;
+        margin-top:-25px;
+        margin-left:950px;
+        z-index:500;
+    }
+    .name{
+        font-size:5px;
+        position:absolute;
+        float:right;
+        margin-top:-55px;
+        margin-left:950px;
+        opacity:0.5;
+    }
+    .sing{
+        font-size:5px;
+        position:absolute;
+        float:right;
+        margin-top:-30px;
+        margin-left:970px;
+    }
+    .go{
+        font-size:5px;
+        position:absolute;
+        float:right;
+        margin-top:-30px;
+        margin-left:1105px;
+        color:purple;
+    }
+    .line1{
+        width:900px;
+        height:2px;
+        background:#ddd;  
+        margin-top:-6px;
+        margin-left:-35px;
+        display:inline-block;
+    }
+    .pinglun{
+        font-size:10px;
+        margin-top:40px;
+        margin-left:210px;
+    }
+    .number{
+        font-size:5px;
+        float:right;
+        margin-top:-15px;
+        margin-right:1100px;
+        opacity:0.5;
+    }
+    .pic1{
+        width:60px;
+        height:60px;
+        float:left;
+        margin-top:40px;
+        margin-left:170px;
+    }
+    .box{
+        width:700px;
+        height:200px;
+        border:2px solid gainsboro;
+        float:left;
+        margin-top:20px;
+        margin-left:20px;
+    }
+    .smile{
+        float:left;
+        margin-top:230px;
+        margin-left:-700px;
+    }
+    #number{
+        width:100px;
+        height:10px;
+        font-size:5px;
+        float:right;
+        margin-right:530px;
+        margin-top:10px;
+        opacity:0.5;
+    }
+    .lan{
+        background:orange;
+        color:white;
+        width:50px;
+        height:20px;
+        border:white;
+        float:right;
+        margin-right:-170px;
+        margin-top:8px;
+    }
+    .good{
+        font-size:10px;
+        margin-top:265px;
+        margin-left:210px;
+    }
+    .line2{
+        width:900px;
+        height:2px;
+        background:#ddd; 
+        float:left; 
+        margin-top:10px;
+        margin-left:190px;
+        display:inline-block;
+    }
+    #pic2{
+        width:60px;
+        height:60px;
+        float:left;
+        margin-top:20px;
+        margin-left:-900px;
+    }
+    .first{
+        color:orange;
+        font-size:20px;
+        float:right;
+        margin-right:1070px;
+    }
+    .second{
+        font-size:5px;
+        float:right;
+        margin-right:350px;
+        margin-top:-50px;
+    }
+    #p{
+        float:left;
+        margin-top:105px;
+        margin-left:900px;
+        font-size:5px;
+    }
+    #q{
+        float:left;
+        margin-top:-19px;
+        margin-left:1030px;
+        font-size:5px;
+    }
+    #add2{
+        float:left;
+        margin-top:-19px;
+        margin-left:990px;
+
+    }
+    #add1{
+        float:left;
+        margin-top:-19px;
+        margin-left:950px;
+        font-size:5px;
+    }
+    #low{
+        font-size:15px;
+        float:left;
+        margin-left:290px;
+        margin-top:-100px;
+    }
+    #timer{
+        font-size:10px;
+        float:left;
+        margin-left:290px;
+        margin-top:-17px;
+    }
+    .pa{
+        height:20px;
+        width:100%;
+        position:absolute;
+        bottom:-100px;
+    }
+    .list{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        list-style-type:none
+    }
+    .list a{
+        float:left;
+        width:30px;
+        height:30px;
+        background:gray;
+        border-radius:50%;
+        font-size:20px;
+        margin-right:90px;
+        margin-top:800px;
+        color:black;
+    } 
+    .min{
+        background-color:white;
+    }
+    .list a:focus{
+        background:yellow;
+    }
+</style>
+<body style="overflow-x:hidden">
+    <!-- 导航 -->
+    <div class="bg">
+        <div class="one"><img src="images/img3.jpg"/></div>
+        <div class="a"><a href="http://www.baidu.com">首页</a></div>
+        <div class="a"><a href="http://www.baidu.com">榜单</a></div>
+        <div class="a"><a href="http://www.baidu.com">歌手</a></div>
+        <div class="a"><a href="http://www.baidu.com">下载酷我客户端</a></div>
+            <div class="star"></div>
+            <a href="http://www.baidu.com" class="b">美女秀</a>
+            <div class="star"></div>
+            <a href="http://www.baidu.com" class="b">酷我耳机</a>
+            <div class="star"></div>
+            <a href="http://www.baidu.com" class="b">VIP会员</a>
+            <div class="star"></div>
+            <a href="http://www.baidu.com" class="b">听</a>
+        <div class="c"><a href="http://www.baidu.com">更多服务</a></div>
+        <div class="c"><a href="http://www.baidu.com">登录</a></div>
+        <div class="c"><a>^</a></div>
+        <div class="d">找到好音乐</div>
+        <div class="search"><img src="images/img4.png"/></div>
+    </div>
+    <div class="word">
+        <div class="title">喜羊羊</div>
+        <div class="all">
+            <div class="title1">专辑:<span>儿歌大全</span></div>
+            <div class="title2">歌手:<span>华语群星</span></div>
+            <div class="title3">分享</div>
+            <img src="images/img7.jpg" class="e"/>
+            <div class="title4"><span>评论</span></div>
+        </div>
+        <div class="title5">上传时间：2015-10-02歌曲来源：民大相思湖网球社</div>
+    </div>
+    <div class="line"></div>
+    <div class="song">
+        <p>原唱：古倩敏，杨沛宜</p>
+        <p>填词：古倩敏</p>
+        <p>谱曲：古倩敏</p>
+        <p>喜羊羊美羊羊懒羊羊沸羊羊</p>
+        <p>慢羊羊软绵绵红太狼灰太狼</p>
+        <p><span>白云因为我变的柔软</span></p>
+        <p>别看我只是一只羊</p>
+        <p>羊儿的聪明难以想像</p>
+        <p>天再高心情一样奔放</p>
+        <p>每天都追赶太阳</p>
+        <p>有什么难题去牵绊我都不会去心伤</p>
+        <p>有什么危险在我面前也不会去慌乱</p>
+        <p>就算有狼群把我追捕也当做游戏一场</p>
+        <p>在什么时间都爱开心笑容都会飞翔</p>
+        <p>就算会摔倒站得起来永远不会沮丧</p>
+        <p>在所有天气拥有叫人大笑的力量</p>
+        <p>虽然我只是羊</p>
+        <p>喜羊羊美羊羊</p>
+    </div>
+    <!-- 音频图 -->
+    <img src="images/img1.jpg" class="bn"/> 
+    <div class="start" id="start"></div>
+    <div id="player" style="bottom: -57px;">
+        <audio autoplay="autoplay" id="mymusic">
+        <source src="../homework8/1.mp3" type="audio/mp3"></audio> 
+    </div> 
+    <!-- 进度条 -->
+    <div class="playerMid">
+        <div id="prograssBar">
+            <img src="./images/current.jpg" id="wp_processBtn"/>
+            <div id="wp_bufBar">
+                <div class="prograssBar" id="wp_processBar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="playerRight">
+      <p id="wp_playTime" class="opacity">00.00</p>
+      <div class="voice" id="voice"></div>
+    </div>
+    <!-- 进度条下面的 -->
+    <div class="load"></div>
+    <div class="zi">免费下载这首歌</div>
+    <div class="down"></div>
+    <img src="images/img9.jpg" class="pic"/>
+    <img src="images/img10.jpg" class="talk"/>
+    <div class="name">郭子仪——H5班</div>
+    <img src="images/img8.gif" class="dong"/>
+    <div class="sing">喜羊羊与灰太狼</div>
+    <a href="##" class="go">去现场></a>
+    <!-- 评论区 -->
+    <div class="write">
+        <div class="pinglun">评论</div>
+        <div class="number">1703条评论</div>
+        <div class="line1"></div>
+        <img src="images/img9.jpg" class="pic1"/>
+        <textarea class="box" type="text" placeholder="分享你的音乐见解" id="box" onkeyup="wordStatic(box);"></textarea>
+        <img src="images/img11.png" class="smile"/>
+        <p id="number">已输入<span id="num1">0</span>个字</p>
+        <button class="lan" id="lan">评论</button>
+    </div>
+    <!-- 精彩评论 -->
+    <div class="perfect">
+        <div class="good">精彩评论</div>
+        <div class="line2"></div>
+    </div>
+    <div id="message1"></div>
+    <div class="pa">
+        <ul class="list">
+          <li><a href="##"><</a></li>
+          <li><a href="##" id="light1">1</a></li>
+          <li><a href="##" id="light">2</a></li>
+          <li><a href="##">3</a></li>
+          <li><a href="##" class="omin">…</a></li>
+          <li><a href="##">17</a></li>
+          <li><a href="##">></a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    var light1=document.getElementById("light1");
+    var light=document.getElementById("light");
+    var message1=document.getElementById("message1");
+    var start=document.getElementById("start");
+    var mymusic=document.getElementById("mymusic");
+    var wp_processBtn=document.getElementById("wp_processBtn");
+    var wp_playTime=document.getElementById("wp_playTime");
+    var voice=document.getElementById("voice");
+    var prograssBar=document.getElementById("prograssBar");
+    var lan=document.getElementById("lan");
+    var box=document.getElementById("box");
+    var width;
+    var minutes1;
+    var seconds1;
+    var time;
+    var text;
+    var div,img2,div2,div3,div4,div5,div6,div7,img1,div9;
+    var id4;
+    var id5;
+    var id7;
+    var id_img1;
+    // 进度条
+    function timeGo(){
+      setInterval(function(){
+        width1=Math.round(mymusic.currentTime)/Math.round(mymusic.duration)*300;
+        wp_processBtn.style.left=width1+"px";
+        minutes1=parseInt(mymusic.currentTime%3600/60);
+        seconds1=parseInt(mymusic.currentTime%3600%60);
+        minutes1=minutes1<10 ? "0"+minutes1 : minutes1;
+        seconds1=seconds1<10 ? "0"+seconds1 : seconds1;
+        wp_playTime.innerHTML=minutes1+"."+seconds1;
+        prograssBar.style.width=width1+"px";
+        prograssBar.style.backgroundColor="yellow";
+      },500);
+    }
+    function timeStop(){
+      if(minutes1==parseInt(mymusic.duration%3600/60)){
+        clearInterval(timeGo());
+      }
+    }
+    timeGo();
+    timeStop();
+    // 暂停键切换
+    start.classname="start";
+    var luck=true;
+    start.onclick=function(){
+      if(luck){
+        start.className="zanting";
+        mymusic.pause();
+      }
+      else{
+        start.className="start";
+        mymusic.play();
+      }
+      luck=!luck;
+    }
+    // 静音
+    voice.onclick=function(){
+      if(mymusic.muted){
+        mymusic.muted=false;
+      }
+      else{
+        mymusic.muted=true;
+      }
+    }
+     //统计文本框中字的个数
+    function wordStatic(input) {
+        var num1=document.getElementById('num1');
+        if (num1 && input){
+            var value1=input.value;
+            value1=value1.replace(/\n|\r/gi,"");
+            num1.innerHTML=value1.length;
+        }
+    }
+    // 按钮获取内容和时间
+    var b=0;
+    lan.onclick=function(){
+        light1.style.backgroundColor="yellow";
+        b=b+1;
+        if(b==4){
+            message1.style.display="none";
+            light1.style.backgroundColor="gray";
+            light.style.backgroundColor="yellow";
+        }
+        text=box.value;
+        var date=new Date();
+        var year=date.getFullYear(); 
+        var mon=date.getMonth()+1;
+        var da=date.getDate(); 
+        var h=date.getHours(); 
+        var m=date.getMinutes(); 
+        var s=date.getSeconds();
+        if(m<10){
+            m="0"+m;
+        }
+        if(s<10){
+            s="0"+s;
+        }
+        time=year+'年'+mon+'月'+da+'日'+h+':'+m+':'+s;
+        getAddress();
+        if(localStorage.getItem('inner')){
+            getNotes();
+        }
+        if(box.value==""){
+            alert("评论区内容不能为空！");
+        }
+    }
+     //内容存储
+    var option={
+        timeout:500,
+        enableHighAccuracy: true
+    }
+    function getAddress() {
+        navigator.geolocation.getCurrentPosition(showPosition,getErr,option);
+    } 
+    var loc=new Array();
+    var loc1=new Array();
+    function getErr() {
+        if(localStorage.getItem('inner')){
+            loc=JSON.parse(localStorage.getItem('inner'))
+        }
+        loc.push({
+            "text":text
+        });
+        localStorage.setItem('inner',JSON.stringify(loc));
+        div4=document.createElement("div");
+        div4.innerHTML=text;
+        div4.setAttribute("id","low");
+        div.appendChild(div4);
+
+        if(localStorage.getItem('clock')){
+            loc1=JSON.parse(localStorage.getItem('clock'))
+        }
+        loc1.push({
+            "clock":time
+        });
+        localStorage.setItem('clock',JSON.stringify(loc1));
+        div5=document.createElement("div");
+        div5.innerHTML=time;
+        div5.setAttribute("id","timer");
+        div.appendChild(div5);
+    } 
+    function showPosition() {
+        if(localStorage.getItem('inner')){
+            loc=JSON.parse(localStorage.getItem('inner'))
+        }
+        loc.push({
+            "text":text
+        });
+        localStorage.setItem('inner',JSON.stringify(loc));
+        div4=document.createElement("div");
+        div4.innerHTML=text;
+        div4.setAttribute("id","low");
+        div.appendChild(div4);
+
+        if(localStorage.getItem('clock')){
+            loc1=JSON.parse(localStorage.getItem('clock'))
+        }
+        loc1.push({
+            "clock":time
+        });
+        localStorage.setItem('clock',JSON.stringify(loc1));
+        div5=document.createElement("div");
+        div5.innerHTML=time;
+        div5.setAttribute("id","timer");
+        div.appendChild(div5);
+    }
+    //从本地存储中获取数据，显示到页面上
+    function getNotes() {
+        div=document.createElement("div");
+        div.setAttribute("class","message");
+        message1.appendChild(div);
+
+        var img = new Image();
+        img.src = "./images/img9.jpg";
+        img2=document.createElement("img");
+        img2.setAttribute("id","pic2");
+        img2.src=img.src;
+        div.appendChild(img2);
+
+        div2=document.createElement("p");
+        div2.setAttribute("class","first");
+        div.appendChild(div2);
+        div2.innerHTML="郭子仪";
+
+        div3=document.createElement("p");
+        div3.setAttribute("class","second");
+        div.appendChild(div3);
+        div3.innerHTML="分享";
+
+        div4=document.createElement("div");
+        div4.setAttribute("id","low");
+        div.appendChild(div4);
+
+        div5=document.createElement("div");
+        div5.setAttribute("id","timer");
+        div.appendChild(div5);
+
+        div6=document.createElement("div");
+        div6.setAttribute("id","p");
+        div.appendChild(div6);
+        div6.innerHTML="删除";
+
+        div7=document.createElement("div");
+        div7.setAttribute("id","add1");
+        div.appendChild(div7);
+        div7.innerHTML=a;
+
+        img1=document.createElement("img");
+        img1.setAttribute("id","add2");
+        img1.src="./images/bg2.jpg";
+        div.appendChild(img1);
+        img1.onclick=dian();
+        
+        div9=document.createElement("div");
+        div9.setAttribute("id","q");
+        div.appendChild(div9);
+        div9.innerHTML="回复";
+
+        var arr3=localStorage['loc'];
+        if(arr3==null){
+            arr3="[]";
+        }
+        arr3=JSON.parse(arr3);
+        for(var i=0;i<arr3.length;i++){
+            div4=document.createElement("div");
+            div4.innerHTML=arr3[i]['inner'];
+            div.appendChild(div4);
+        }
+    }
+    var a=0;
+    //点赞
+    function dian(){
+       a+=1;
+    }
+</script>
+</html>
